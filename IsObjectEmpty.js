@@ -26,5 +26,10 @@ Explanation: The array has 3 elements so it is not empty.
 // Shartda aytilyaptiki  obj parametrga argument sifatida array yoki object berishimiz mumkin ekan. Agar array yoki object bosh boladigan bolsa, true qiymatini agarda ichida element yoki property boladigan bolsa false ni return qilshimiz kerak edi. Va quyidagi code orqali object va arrayni lengthni tekshirdik agar 0 ga teng bolsa true ni agar 0 dan katta boladigan bolsa falseni qaytaradi.
 
 var isEmpty = function (obj) {
-  return obj.length === 0 || Object.keys(obj).length === 0 ? true : false;
+  return (
+    obj === null ||
+    obj === undefined ||
+    Array.isArray(obj).length === 0 ||
+    (typeof obj === "object" && Object.keys(obj).length === 0)
+  );
 };
