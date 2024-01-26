@@ -28,6 +28,9 @@ Incrementing by one gives 9 + 1 = 10.
 Thus, the result should be [1,0].
 */
 
+// Solution
+//  plusOne nomli function yasadim. U digits parameterini qabul  qiladi argument sifatida numberlardan iborat array jonatamiz. for loop orqali digiitsni aylanib chiqyapman initial qiymat qilib digits arrayining oxirgi elementini index raqamini beryapman. Agar oxirgi element raqami dan kichik sonlar bolsa uni 1 ga oshirib beradi. Agar 9 ga teng bolsa uning orniga 0 qaytaradi. Va yakunda unshift() methodi orqali arrayimiz oldiga 1 raqamini qoshib qoyyapmiz. Ya'ni 9 bolganda bizga 1,0 qilib berishi uchun.
+
 var plusOne = function (digits) {
   for (let i = digits.length - 1; i >= 0; i--) {
     if (digits[i] < 9) {
